@@ -1,0 +1,1 @@
+# ezplatform-code-style
