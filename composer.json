@@ -9,5 +9,23 @@
             "email": "ezsystems@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require": {
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "EzSystems\\EzPlatformCodeStyle\\": "src/lib/"
+        }
+    },
+    "scripts": {
+        "fix-cs": "@php ./vendor/bin/php-cs-fixer fix -v --show-progress=estimating"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
 }
