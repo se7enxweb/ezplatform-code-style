@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright Copyright (C) eZ Systems AS. All rights reserved.
+ * @copyright Copyright (C) Ibexa AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
 declare(strict_types=1);
@@ -11,14 +11,14 @@ namespace EzSystems\EzPlatformCodeStyle\PhpCsFixer;
 use PhpCsFixer\ConfigInterface;
 
 /**
- * Factory for Config instance that should be used for all internal eZ Systems packages.
+ * Factory for Config instance that should be used for all internal Ibexa packages.
  *
  * @internal
  */
 class EzPlatformInternalConfigFactory
 {
     public const EZPLATFORM_PHP_HEADER = <<<'EOF'
-@copyright Copyright (C) eZ Systems AS. All rights reserved.
+@copyright Copyright (C) Ibexa AS. All rights reserved.
 @license For full copyright and license information view LICENSE file distributed with this source code.
 EOF;
 
