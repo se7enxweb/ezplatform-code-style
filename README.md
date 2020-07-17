@@ -6,7 +6,7 @@ to contributions, etc.
 
 ## COPYRIGHT
 
-Copyright (C) 1999-2019 eZ Systems AS. All rights reserved.
+Copyright (C) 1999-2020 Ibexa AS. All rights reserved.
 
 ## LICENSE
 
