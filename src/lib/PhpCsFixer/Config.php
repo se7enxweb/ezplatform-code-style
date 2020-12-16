@@ -170,6 +170,7 @@ class Config extends ConfigBase
             'yoda_style' => false,
             'no_break_comment' => false,
             'self_accessor' => false,
+            'static_lambda' => true,
         ]);
     }
 }
