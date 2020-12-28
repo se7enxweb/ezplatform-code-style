@@ -171,6 +171,7 @@ class Config extends ConfigBase
             'no_break_comment' => false,
             'self_accessor' => false,
             'static_lambda' => true,
+            'ordered_imports' => true,
         ]);
     }
 }
