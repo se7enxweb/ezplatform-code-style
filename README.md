@@ -1,7 +1,7 @@
 # eZ Platform Code Style
 
-This package contains eZ Platform Coding Standards which are aimed to include plugins
-for code style tools, plugins for CI, IDE settings, Git hooks, GitHub templates related
+This package contains eZ Platform Coding Standards which are aimed to include plugins  
+for code style tools, plugins for CI, IDE settings, Git hooks, GitHub templates related  
 to contributions, etc.
 
 ## FAQ
@@ -10,7 +10,7 @@ See [FAQ](doc/FAQ.md) for common questions about contributing to eZ Platform-rel
 
 ## COPYRIGHT
 
-Copyright (C) 1999-2020 Ibexa AS. All rights reserved.
+Copyright (C) 1999-2021 Ibexa AS. All rights reserved.
 
 ## LICENSE
 
