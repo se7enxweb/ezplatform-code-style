@@ -18,6 +18,7 @@ class Config extends ConfigBase
 
         $this->setRiskyAllowed(true);
         $this->setRules([
+            'declare_strict_types' => true,
             'encoding' => true,
             'full_opening_tag' => true,
             'blank_line_after_namespace' => true,
@@ -159,7 +160,7 @@ class Config extends ConfigBase
             'phpdoc_to_comment' => false,
             'cast_spaces' => false,
             'blank_line_after_opening_tag' => false,
-            'single_blank_line_before_namespace' => false,
+            'single_blank_line_before_namespace' => true,
             'space_after_semicolon' => false,
             'native_function_invocation' => false,
             'phpdoc_types_order' => [

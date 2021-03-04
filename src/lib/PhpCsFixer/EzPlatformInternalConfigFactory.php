@@ -24,7 +24,7 @@ EOF;
 
     public static function build(): ConfigInterface
     {
-        $config = Config::create();
+        $config = new Config();
 
         $specificRules = [
             'header_comment' => [
