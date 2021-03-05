@@ -1,15 +1,16 @@
 {
     "name": "ezsystems/ezplatform-code-style",
-    "description": "eZ Platform Code Style knowledge base",
+    "description": "Ibexa Code Style knowledge base",
     "type": "internal",
-    "license": "GPL-2.0-only",
+    "license": "(GPL-2.0-only or proprietary)",
     "authors": [
         {
-            "name": "eZ Engineering",
-            "email": "ezsystems@users.noreply.github.com"
+            "name": "Ibexa Engineering",
+            "email": "ibexa@users.noreply.github.com"
         }
     ],
     "require": {
+        "php": ">=7.1",
         "friendsofphp/php-cs-fixer": "^2.17"
     },
     "require-dev": {
