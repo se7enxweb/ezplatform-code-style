@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace EzSystems\EzPlatformCodeStyle\PhpCsFixer;
 
+use AdamWojs\PhpCsFixerPhpdocForceFQCN\Fixer\Phpdoc\ForceFQCNFixer;
 use PhpCsFixer\ConfigInterface;
 
 /**
@@ -25,6 +26,9 @@ EOF;
     public static function build(): ConfigInterface
     {
         $config = new Config();
+        $config->registerCustomFixers([
+            new ForceFQCNFixer(),
+        ]);
 
         $specificRules = [
             'header_comment' => [
@@ -33,6 +37,7 @@ EOF;
                 'location' => 'after_open',
                 'separate' => 'top',
             ],
+            'AdamWojs/phpdoc_force_fqcn_fixer' => true,
         ];
         $config->setRules(array_merge($config->getRules(), $specificRules));
 
