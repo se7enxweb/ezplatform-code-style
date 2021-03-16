@@ -6,9 +6,9 @@ to contributions, etc.
 
 ## Usage
 
-### 3-rd party packages
+### Third party packages
 
-Create `.php_cs` file in your project root directory with the following content:
+Create a `.php_cs` file in your project root directory with the following content:
 
 ```php
 <?php
@@ -26,7 +26,7 @@ return $config;
 
 ### Ibexa packages
 
-Create `.php_cs` file in your project root directory with the following content:
+Create a `.php_cs` file in your project root directory with the following content:
 
 ```php
 <?php
