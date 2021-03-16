@@ -1,12 +1,49 @@
 # Ibexa Code Style
 
-This package contains eZ Platform Coding Standards which are aimed to include plugins  
+This package contains Ibexa Coding Standards which are aimed to include plugins  
 for code style tools, plugins for CI, IDE settings, Git hooks, GitHub templates related  
 to contributions, etc.
 
+## Usage
+
+### Third party packages
+
+Create a `.php_cs` file in your project root directory with the following content:
+
+```php
+<?php
+
+$config = new EzSystems\EzPlatformCodeStyle\PhpCsFixer\Config();
+$config->setFinder(
+    PhpCsFixer\Finder::create()
+        ->in(__DIR__ . '/src')
+        ->in(__DIR__ . '/tests')
+        ->files()->name('*.php')
+);
+
+return $config;
+```
+
+### Ibexa packages
+
+Create a `.php_cs` file in your project root directory with the following content:
+
+```php
+<?php
+
+return EzSystems\EzPlatformCodeStyle\PhpCsFixer\EzPlatformInternalConfigFactory::build()
+    ->setFinder(
+        PhpCsFixer\Finder::create()
+            ->in(__DIR__ . '/src')
+            ->in(__DIR__ . '/tests')
+            ->files()->name('*.php')
+    )
+;
+```
+
 ## FAQ
 
-See [FAQ](doc/FAQ.md) for common questions about contributing to eZ Platform-related packages.
+See [FAQ](doc/FAQ.md) for common questions about contributing to Ibexa-related packages.
 
 ## COPYRIGHT
 
