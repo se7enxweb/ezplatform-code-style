@@ -1,3 +1,6 @@
 /vendor/
+# PHP CS Fixer v2
 /.php_cs.cache
+# PHP CS Fixer v3
+/.php-cs-fixer.cache
 /composer.lock

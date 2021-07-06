@@ -15,15 +15,19 @@
         "adamwojs/php-cs-fixer-phpdoc-force-fqcn": "^1.1"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-master"
+        "roave/security-advisories": "dev-master",
+        "phpstan/phpstan": "^0.12.91"
     },
     "autoload": {
         "psr-4": {
-            "EzSystems\\EzPlatformCodeStyle\\": "src/lib/"
+            "EzSystems\\EzPlatformCodeStyle\\": "src/bc/",
+            "Ibexa\\CodeStyle\\": "src/lib/"
         }
     },
     "scripts": {
-        "fix-cs": "@php ./vendor/bin/php-cs-fixer fix -v --show-progress=estimating"
+        "check-cs": "php-cs-fixer fix -v --diff --dry-run --show-progress=dots",
+        "fix-cs": "php-cs-fixer fix -v --show-progress=dots",
+        "phpstan": "phpstan analyse -c phpstan.neon"
     },
     "extra": {
         "branch-alias": {

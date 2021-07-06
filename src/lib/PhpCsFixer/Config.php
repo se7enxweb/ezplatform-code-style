@@ -6,12 +6,15 @@
  */
 declare(strict_types=1);
 
-namespace EzSystems\EzPlatformCodeStyle\PhpCsFixer;
+namespace Ibexa\CodeStyle\PhpCsFixer;
 
 use PhpCsFixer\Config as ConfigBase;
 
 class Config extends ConfigBase
 {
+    /**
+     * @param string $name
+     */
     public function __construct($name = 'default')
     {
         parent::__construct($name);
@@ -26,7 +29,7 @@ class Config extends ConfigBase
             'function_declaration' => true,
             'indentation_type' => true,
             'line_ending' => true,
-            'lowercase_constants' => true,
+            'constant_case' => ['case' => 'lower'],
             'lowercase_keywords' => true,
             'no_closing_tag' => true,
             'no_spaces_after_function_name' => true,
@@ -46,7 +49,7 @@ class Config extends ConfigBase
             'braces' => [
                 'allow_single_line_closure' => true,
             ],
-            'class_attributes_separation' => ['elements' => ['method']],
+            'class_attributes_separation' => ['elements' => ['method' => 'one']],
             'class_definition' => ['single_line' => true],
             'declare_equal_normalize' => true,
             'function_typehint_space' => true,
@@ -93,7 +96,9 @@ class Config extends ConfigBase
             'php_unit_fqcn_annotation' => true,
             'phpdoc_annotation_without_dot' => false,
             'phpdoc_indent' => true,
-            'phpdoc_inline_tag' => true,
+            'phpdoc_inline_tag_normalizer' => true,
+            'phpdoc_tag_type' => true,
+            'general_phpdoc_tag_rename' => true,
             'phpdoc_no_access' => true,
             'phpdoc_no_alias_tag' => [
                 'replacements' => [
@@ -125,7 +130,7 @@ class Config extends ConfigBase
             'standardize_increment' => true,
             'standardize_not_equals' => true,
             'ternary_operator_spaces' => true,
-            'trailing_comma_in_multiline_array' => true,
+            'trailing_comma_in_multiline' => true,
             'trim_array_spaces' => true,
             'unary_operator_spaces' => true,
             'whitespace_after_comma_in_array' => true,
@@ -151,7 +156,7 @@ class Config extends ConfigBase
             'no_homoglyph_names' => true,
             'non_printable_character' => true,
             'php_unit_construct' => true,
-            'psr4' => true,
+            'psr_autoloading' => true,
             'set_type_to_cast' => true,
             'concat_space' => ['spacing' => 'one'],
             'array_syntax' => ['syntax' => 'short'],
@@ -176,3 +181,8 @@ class Config extends ConfigBase
         ]);
     }
 }
+
+/**
+ * @deprecated Use \Ibexa\Platform\CodeStyle\PhpCsFixer\Config instead.
+ */
+class_alias(Config::class, 'EzSystems\EzPlatformCodeStyle\PhpCsFixer\Config');
