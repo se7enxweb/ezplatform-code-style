@@ -50,7 +50,6 @@ class Config extends ConfigBase
                 'allow_single_line_closure' => true,
             ],
             'class_attributes_separation' => ['elements' => ['method' => 'one']],
-            'class_definition' => ['single_line' => true],
             'declare_equal_normalize' => true,
             'function_typehint_space' => true,
             'include' => true,
