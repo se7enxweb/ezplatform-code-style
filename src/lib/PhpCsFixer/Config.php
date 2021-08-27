@@ -49,7 +49,12 @@ class Config extends ConfigBase
             'braces' => [
                 'allow_single_line_closure' => true,
             ],
-            'class_attributes_separation' => ['elements' => ['method' => 'one']],
+            'class_attributes_separation' => [
+                'elements' => [
+                    'method' => 'one',
+                    'property' => 'one',
+                ],
+            ],
             'declare_equal_normalize' => true,
             'function_typehint_space' => true,
             'include' => true,
