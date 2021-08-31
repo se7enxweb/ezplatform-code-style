@@ -101,7 +101,11 @@ class Config extends ConfigBase
             'phpdoc_annotation_without_dot' => false,
             'phpdoc_indent' => true,
             'phpdoc_inline_tag_normalizer' => true,
-            'phpdoc_tag_type' => true,
+            'phpdoc_tag_type' => [
+                'tags' => [
+                    'inheritdoc' => 'inline',
+                ],
+            ],
             'general_phpdoc_tag_rename' => true,
             'phpdoc_no_access' => true,
             'phpdoc_no_alias_tag' => [
