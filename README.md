@@ -8,12 +8,18 @@ to contributions, etc.
 
 ### Third party packages
 
-Create a `.php_cs` file in your project root directory with the following content:
+Create a `.php-cs-fixer.php` file in your project root directory with the following content:
 
 ```php
 <?php
 
-$config = new EzSystems\EzPlatformCodeStyle\PhpCsFixer\Config();
+$factory = new Ibexa\CodeStyle\PhpCsFixer\InternalConfigFactory();
+
+// You can omit the call below if you want Ibexa ruleset with no custom rules
+$factory->withRules([
+    // Your rules go here
+]);
+$config = $factory->buildConfig();
 $config->setFinder(
     PhpCsFixer\Finder::create()
         ->in(__DIR__ . '/src')
@@ -26,12 +32,12 @@ return $config;
 
 ### Ibexa packages
 
-Create a `.php_cs` file in your project root directory with the following content:
+Create a `.php-cs-fixer.php` file in your project root directory with the following content:
 
 ```php
 <?php
 
-return EzSystems\EzPlatformCodeStyle\PhpCsFixer\EzPlatformInternalConfigFactory::build()
+return Ibexa\CodeStyle\PhpCsFixer\InternalConfigFactory::build()
     ->setFinder(
         PhpCsFixer\Finder::create()
             ->in(__DIR__ . '/src')
